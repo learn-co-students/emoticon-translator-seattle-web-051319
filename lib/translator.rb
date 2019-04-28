@@ -2,9 +2,7 @@ require "yaml"
 
 def load_library(path)
 	#create lookup table structure
-	table = {}
-	table["get_meaning"] = {}
-	table["get_emoticon"] = {}
+	table = {"get_meaning" => {}, "get_emoticon" => {}}
 	
 	#populate lookup table
 	YAML.load_file(path).each do |emotion, symbols|
